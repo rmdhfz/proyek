@@ -38,6 +38,8 @@
     "webpack-merge": "^5.0.9"
   },
   "dependencies": {
+    "copy-webpack-plugin": "^6.0.3",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.5.1",
     "regenerator-runtime": "^0.13.7"
   }
