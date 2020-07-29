@@ -1,0 +1,26 @@
+{
+  "name": "proyek",
+  "version": "1.0.0",
+  "description": "proyek to submission dicoding",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmdhfz/proyek.git"
+  },
+  "keywords": [
+    "proyek",
+    "submission",
+    "dicoding",
+    "hafiz",
+    "ramadhan"
+  ],
+  "author": "Hafiz Ramadhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rmdhfz/proyek/issues"
+  },
+  "homepage": "https://github.com/rmdhfz/proyek#readme"
+}
