@@ -27,8 +27,7 @@ class Bar extends HTMLElement {
 	               padding: 16px;
 	           }
 			</style>
-    	<h2>Movie Finder</h2>
-
+    	<h2>Movie Finder - <div class="time"></div></h2>
     	`;
     }
 }

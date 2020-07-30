@@ -5,9 +5,23 @@ class Item extends HTMLElement {
         this.shadowDOM = this.attachShadow({ mode: "open" });
     }
 
+
+    connectedCallback() {
+        this.render();
+    }
+
+    set clickEvent(event) {
+        this._clickEvent = event;
+        this.render();
+    }
+
     set movie(movie) {
         this._movie = movie;
         this.render();
+    }
+
+    get value() {
+        return this.shadowDOM.querySelector("#detail-movie").value;
     }
 
     render() {
@@ -49,11 +63,6 @@ class Item extends HTMLElement {
                    font-weight: lighter;
                }
 
-               .movie-info > h3 {
-                   font-weight: lighter;
-                   float: right;
-               }
-             
                .movie-info > p {
                    margin-top: 10px;
                    overflow: hidden;
@@ -62,13 +71,26 @@ class Item extends HTMLElement {
                    -webkit-box-orient: vertical;
                    -webkit-line-clamp: 10;
                }
+               #detail-movie {
+                  width: 20%;
+                  cursor: pointer;
+                  margin-left: auto;
+                  padding: 16px;
+                  background-color: #1a73e8;
+                  color: #fff;
+                  text-decoration: none;
+                  text-overflow: ellipsis;
+                  border-radius: 5px solid black;
+                  float: right;
+               }
            </style>
-           <img class="fan-art-movie" src="${fullpath}" draggable="false" alt="${this._movie.poster_path}">
+           <img class="fan-art-movie" src="${fullpath}" draggable="false" alt="img for ${this._movie.title}">
            <div class="movie-info">
-               <h2>${this._movie.title}</h2>
-               <h3><i class="fa fa-calendar" aria-hidden="1"></i> ${this._movie.release_date}</h3>
+               <h2>${this._movie.title} - Release Date: ${this._movie.release_date}</h2>
                <p>${this._movie.overview}</p>
+               <button id="detail-movie" value="${this._movie.id}">Detail Movie</button>
            </div>`;
+        this.shadowDOM.querySelector("#detail-movie").addEventListener("click", this._clickEvent);
     }
 }
 

@@ -20,6 +20,7 @@ class Search extends HTMLElement {
 
     render() {
         this.shadowDOM.innerHTML = `
+        
        <style>
        .search-container {
             max-width: 800px;
@@ -82,9 +83,10 @@ class Search extends HTMLElement {
             }
         }
        </style>
+
        <div id="search-container" class="search-container">
-           <input placeholder="Search football club" id="searchElement" type="search" required="1">
-           <button id="searchButtonElement" type="submit">Search</button>
+           <input placeholder="Search your favorite movie" id="searchElement" type="search" required="1">
+           <button id="searchButtonElement" type="submit">Search Movie</button>
        </div>
        `;
         this.shadowDOM.querySelector("#searchButtonElement").addEventListener("click", this._clickEvent);
