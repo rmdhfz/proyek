@@ -62,7 +62,6 @@ class Item extends HTMLElement {
                .movie-info > h2 {
                    font-weight: lighter;
                }
-
                .movie-info > p {
                    margin-top: 10px;
                    overflow: hidden;
