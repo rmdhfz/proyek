@@ -42,7 +42,7 @@
     "webpack-merge": "^5.0.9"
   },
   "dependencies": {
-    "moment": "^2.27.0",
+    "moment": "^2.29.2",
     "regenerator-runtime": "^0.13.7"
   }
 }
